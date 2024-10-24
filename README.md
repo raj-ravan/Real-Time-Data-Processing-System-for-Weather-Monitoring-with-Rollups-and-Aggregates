@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Real-Time-Data-Processing-System-for-Weather-Monitoring
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time Real-Time-Data-Processing-System-for-Weather-Monitoring that provides current weather data and forecasts for multiple locations.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This application leverages the OpenWeatherMap API to provide comprehensive weather information including current conditions and 5-day forecasts. The system is designed to be user-friendly, responsive, and easily extendable for additional features.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Real-time Weather Data**: Current weather conditions for any city
+- **5-Day Weather Forecast**: Detailed weather predictions for upcoming days
+- **Temperature Conversion**: Support for both Celsius and Fahrenheit
+- **Comprehensive Metrics**:
+  - Temperature (current, max, min)
+  - Humidity levels
+  - Wind speed
+  - Weather conditions
+- **Daily Weather Summaries**: Aggregated weather data with dominant conditions
+- **Flexible Updates**: Configurable data refresh intervals
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## System Requirements
 
-### `npm test`
+- Minimum screen resolution: 1070 x 680 pixels
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Internet connection for API calls
+- Node.js (optional, required only if using local development server)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Method 2: Local Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+```bash
+git clone https://github.com/raj-ravan/Real-Time-Data-Processing-System-for-Weather-Monitoring-with-Rollups-and-Aggregates.git
+cd Real-Time-Data-Processing-System-for-Weather-Monitoring-with-Rollups-and-Aggregates
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Start local server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open in browser:
+```
+Navigate to http://localhost:8080
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Design Choices
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Architecture
+- **Modular Design**: Separate components for initialization, data retrieval, and display
+- **Responsive Layout**: Adaptable interface for various screen sizes
+- **Configurable Updates**: Flexible data refresh intervals
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Technical Decisions
+- **API Integration**: OpenWeatherMap API for reliable weather data
+- **Temperature Units**: User-selectable Celsius/Fahrenheit conversion
+- **Data Refresh**: Configurable intervals for real-time updates
 
-## Learn More
+## Core Modules
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **System Initialization**
+   - API connection setup
+   - Configuration loading
+   - Interface initialization
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Data Retrieval**
+   - Scheduled API calls
+   - Response parsing
+   - Error handling
 
-### Code Splitting
+3. **Weather Processing**
+   - Temperature conversion
+   - Data aggregation
+   - Trend analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Display System**
+   - Current conditions
+   - Forecast display
+   - Summary generation
 
-### Analyzing the Bundle Size
+## API Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application uses the OpenWeatherMap API for:
+- Current weather conditions
+- 5-day weather forecasts
+- Additional weather parameters (humidity, wind speed)
