@@ -82,3 +82,6 @@ The application uses the OpenWeatherMap API for:
 - Current weather conditions
 - 5-day weather forecasts
 - Additional weather parameters (humidity, wind speed)
+
+
+hosted on : - https://real-time-data-processing-system-git-5aa05a-rajravans-projects.vercel.app/
