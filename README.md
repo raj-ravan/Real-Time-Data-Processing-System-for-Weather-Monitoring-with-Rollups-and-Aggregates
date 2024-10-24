@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+Rule Engine Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
+This application is a rule engine that determines user eligibility based on attributes such as age, department, salary, and experience. It uses an Abstract Syntax Tree (AST) to represent and manage conditional rules, allowing for dynamic rule creation, combination, and evaluation.
 
-## Available Scripts
+Features
+Create Rules: Define rules using a string format that gets converted into an AST.
+Combine Rules: Combine multiple rules into a single AST for more complex evaluations.
+Evaluate Rules: Check if the given data meets the criteria defined by the AST.
+Tree Visualization: Define or Combine Rule would should show Tree Representation.
 
-In the project directory, you can run:
+Tech Stack
+Backend: Node.js, Express.js
+Database: MongoDB
+Getting Started
+Prerequisites
+Node.js and npm installed
+MongoDB installed and running
+Installation
+Clone the Repository
 
-### `npm start`
+git clone "https://github.com/Santosh-2003-sahoo/App1-Rule-Engine-with-AST.git"
+cd rule-engine
+Install Backend Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm install
+Start MongoDB
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ensure that MongoDB is running on your local machine:
 
-### `npm test`
+mongod
+Start the Backend Server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+nodemon server.js
+API Endpoints
+Create a Rule
+Endpoint: /api/create_rule
 
-### `npm run build`
+Method: POST
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Body:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+{
+  "ruleString": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)",
+  "ruleName": "Rule1"
+}
+use appropriate spaces in Rules for correct results.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Rule should be in follow format: variable operator value
 
-### `npm run eject`
+Response:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+{
+  "_id": "605c72ef1f4e3a001f4d2e9a",
+  "rule_name": "Rule1",
+  "rule_ast": { ... }
+}
+Combine Rules
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Endpoint: /api/rules/combine_rules
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Method: POST
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Body:
 
-## Learn More
+{
+  "ruleIds": ["605c72ef1f4e3a001f4d2e9a", "605c730f1f4e3a001f4d2e9b"]
+  "operators: op
+}
+Response:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+{
+  "type": "operator",
+  "value": operator,
+  "left": { ... },
+  "right": { ... }
+}
+Evaluate a Rule
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Endpoint: /api/rules/evaluate_rule
 
-### Code Splitting
+Method: POST
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Body:
 
-### Analyzing the Bundle Size
+{
+  "rule": { ... },
+  "data": {
+    "age": 35,
+    "department": "Sales",
+    "salary": 60000,
+    "experience": 3
+  }
+}
+Response:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+{
+  "result": true
+}
