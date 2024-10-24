@@ -1,0 +1,317 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+  color: #fff;
+}
+
+/* Weather App Container */
+.weather-app {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Search Section */
+.search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.search-bar:focus {
+  outline: none;
+  border: 2px solid #00f2fe;
+}
+
+/* Button */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00f2fe;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #4facfe;
+  transform: scale(1.05);
+}
+
+/* Unit Selector */
+.unit-selector {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+/* Weather Info Section */
+.weather-info {
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+.city {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.description {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.temp,
+.temp-feels-like,
+.temp-avg,
+.temp-min,
+.temp-max,
+.humidity,
+.wind {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Forecast Section */
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forecast-item {
+  text-align: center;
+  animation: bounce 0.5s ease-in-out forwards;
+}
+
+.forecast-item img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* Weather Info Section */
+.weather-info {
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Card Styles */
+.forecast-item {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Add any other styles you want to keep... */
+/* Reset some default styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #0f1c3f, #1a2a6c); /* Night sky gradient */
+  color: #fff;
+}
+
+/* Weather App Container */
+.weather-app {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7); /* Darker container for contrast */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Search Section */
+.search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.search-bar:focus {
+  outline: none;
+  border: 2px solid #00f2fe;
+}
+
+/* Button */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00f2fe;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #4facfe;
+  transform: scale(1.05);
+}
+
+/* Unit Selector */
+.unit-selector {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly more transparent for night theme */
+  color: #fff; /* Change text color to white */
+}
+
+/* Weather Info Section */
+.weather-info {
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+.city {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.description {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.temp,
+.temp-feels-like,
+.temp-avg,
+.temp-min,
+.temp-max,
+.humidity,
+.wind {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Forecast Section */
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.forecast-item {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background for cards */
+  padding: 10px;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); /* Subtle white shadow on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
