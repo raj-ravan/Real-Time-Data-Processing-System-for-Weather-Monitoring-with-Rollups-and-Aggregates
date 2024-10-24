@@ -19,16 +19,6 @@ This application leverages the OpenWeatherMap API to provide comprehensive weath
 - **Daily Weather Summaries**: Aggregated weather data with dominant conditions
 - **Flexible Updates**: Configurable data refresh intervals
 
-## System Requirements
-
-- Minimum screen resolution: 1070 x 680 pixels
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Internet connection for API calls
-- Node.js (optional, required only if using local development server)
-
-## Getting Started
-
-
 ### Method 2: Local Development
 
 1. Clone the repository:
